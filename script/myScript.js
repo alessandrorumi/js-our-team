@@ -2,6 +2,9 @@
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 // Stampare le stesse informazioni su DOM sotto forma di stringhe
 
+// Dichiarazione 1° membro del team
+const container = document.getElementById('team-container');
+
 const team = [
 
   {
@@ -46,14 +49,20 @@ const team = [
 
 // Ciclo elementi in team
 for (let i = 0; i < team.length; i++) {
-  // console.log(team[i]);
-
+  
   // Variabile associata agli oggetti
   let arrayElement = team[i];
 
-    // Ciclo oggetti nell'array (in team)
-    for (let teamProperties in arrayElement) {
-    console.log(teamProperties + ": " + arrayElement[teamProperties]);
-  }
-}
+  // Dichiarazione variabile dati dei membri
+  let teamData = '';
 
+  // Ciclo oggetti nell'array (in team)
+  for (let teamProperties in arrayElement) {
+    // console.log(`${teamProperties}: ${arrayElement[teamProperties]}; `);
+    teamData += `${teamProperties}: ${arrayElement[teamProperties]}; `;
+  }
+
+  // Dati dei membri in DOM (che fatica!)
+  container.innerHTML += `<p>${teamData}</p>`;
+
+}
