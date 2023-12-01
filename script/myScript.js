@@ -42,4 +42,18 @@ const team = [
   
 ];
 
-console.log(team);
+// console.log(team);
+
+// Ciclo elementi in team
+for (let i = 0; i < team.length; i++) {
+  // console.log(team[i]);
+
+  // Variabile associata agli oggetti
+  let arrayElement = team[i];
+
+    // Ciclo oggetti nell'array (in team)
+    for (let teamProperties in arrayElement) {
+    console.log(teamProperties + ": " + arrayElement[teamProperties]);
+  }
+}
+
