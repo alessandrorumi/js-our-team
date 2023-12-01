@@ -60,6 +60,10 @@ for (let i = 0; i < team.length; i++) {
   for (let teamProperties in arrayElement) {
     // console.log(`${teamProperties}: ${arrayElement[teamProperties]}; `);
     teamData += `${teamProperties}: ${arrayElement[teamProperties]}; `;
+    
+      if (teamProperties === 'image') {
+        teamData += `<img src="img/${arrayElement[teamProperties]}">`;
+      }
   }
 
   // Dati dei membri in DOM (che fatica!)
