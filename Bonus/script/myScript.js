@@ -63,6 +63,6 @@ for (let i = 0; i < team.length; i++) {
   // Variabile associata all'img
   let imageElement = arrayElement.image;
 
-  container.innerHTML += `<div><img src='img/${imageElement}' <br> <h2>${nameElement}</h2> <br> <span>${roleElement}</span></div>`;
+  container.innerHTML += `<div><img src='img/${imageElement}'</img><h4>${nameElement}</h4><span>${roleElement}</span></div>`;
 
 }
