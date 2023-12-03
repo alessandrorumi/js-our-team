@@ -48,25 +48,21 @@ const team = [
 // console.log(team);
 
 // Ciclo elementi in team
+
 for (let i = 0; i < team.length; i++) {
-  
+
   // Variabile associata agli oggetti
   let arrayElement = team[i];
 
-  // Dichiarazione variabile dati dei membri
-  let teamData = '';
+  // Variabile associata al nome
+  let nameElement = arrayElement.name;
 
-  // Ciclo oggetti nell'array (in team)
-  for (let teamProperties in arrayElement) {
-    // console.log(`${teamProperties}: ${arrayElement[teamProperties]}; `);
-    teamData += `${teamProperties}: ${arrayElement[teamProperties]}; `;
-    
-      if (teamProperties === 'image') {
-        teamData += `<img src="img/${arrayElement[teamProperties]}">`;
-      }
-  }
+  // Variabile associata al ruolo
+  let roleElement = arrayElement.role;
 
-  // Dati dei membri in DOM (che fatica!)
-  container.innerHTML += `<p>${teamData}</p>`;
+  // Variabile associata all'img
+  let imageElement = arrayElement.image;
+
+  container.innerHTML += `<div><img src='img/${imageElement}' <br> <h2>${nameElement}</h2> <br> <span>${roleElement}</span></div>`;
 
 }
